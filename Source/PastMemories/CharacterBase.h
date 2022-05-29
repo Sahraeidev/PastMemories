@@ -50,7 +50,6 @@ private:
 		float PunchDamage = 10.f;
 	
 	AWeapon* CurrentWeapon;
-	void BeginPlay() override;
 	void Punch();
 	void MoveForward(float Value);
 	void MoveRight(float Value);

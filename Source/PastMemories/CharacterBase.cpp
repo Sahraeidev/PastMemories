@@ -16,12 +16,6 @@ ACharacterBase::ACharacterBase()
 	WeaponPlace->SetupAttachment(GetRootComponent());
 }
 
-
-void ACharacterBase::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void ACharacterBase::SetFirstWeapon()
 {
 	if(FirstWeapon)
