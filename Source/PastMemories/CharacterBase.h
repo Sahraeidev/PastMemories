@@ -48,6 +48,8 @@ private:
 		float PunchRange = 50.f;
 	UPROPERTY(EditAnywhere,Category = Fighting)
 		float PunchDamage = 10.f;
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<UCameraShakeBase> HitShake;
 	
 	AWeapon* CurrentWeapon;
 	void Punch();

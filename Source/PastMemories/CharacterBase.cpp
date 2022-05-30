@@ -78,6 +78,10 @@ void ACharacterBase::Punch()
 /*HIT*/
 void ACharacterBase::Hit()
 {
+	if(HitShake != nullptr)
+	{
+		GetWorld()->GetFirstPlayerController()->ClientStartCameraShake(HitShake);
+	}
 	FTimerHandle Timer;
 	GetWorldTimerManager().SetTimer(Timer,this,&ACharacterBase::SetHit,0.4f);
 	bIsHit = true;
