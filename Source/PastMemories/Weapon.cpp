@@ -33,7 +33,7 @@ void AWeapon::CheckForEnemy(FHitResult& HitRes, float Ranges)
 	FVector Start = GetOwner()->GetActorLocation();
 	FVector End = Start + (GetOwner()->GetActorRotation().Vector() * Ranges);
 	FCollisionQueryParams Params;
-	UKismetSystemLibrary::LineTraceSingle(this,Start,End,UEngineTypes::ConvertToTraceType(ECC_Visibility),false,IgnoreActor,EDrawDebugTrace::None,HitRes,true);
+	UKismetSystemLibrary::LineTraceSingle(this,Start,End,UEngineTypes::ConvertToTraceType(ECC_Visibility),false,IgnoreActor,EDrawDebugTrace::ForDuration,HitRes,true,FLinearColor::White,FLinearColor::Blue,2);
 }
 
 /*WHEN PLAYER STEPS ON THE WEAPON*/
